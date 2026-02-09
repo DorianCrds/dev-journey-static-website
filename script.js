@@ -15,3 +15,18 @@ projects.forEach((project) => {
     }
   });
 });
+
+const navLinks = document.querySelectorAll(".main-nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const targetId = link.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+
+    targetSection.scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
