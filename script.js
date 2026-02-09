@@ -30,3 +30,31 @@ navLinks.forEach((link) => {
     });
   });
 });
+
+
+const contactForm = document.querySelector("#contact form");
+
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+  const message = document.querySelector("#message").value;
+
+  contactForm.reset();
+
+  const successMessage = document.createElement("p");
+  successMessage.textContent =
+    "Thank you for your message! I will get back to you soon.";
+  successMessage.style.marginTop = "1rem";
+  successMessage.style.color = "var(--accent)";
+  successMessage.style.fontWeight = "500";
+
+  const existingMessage = contactForm.querySelector(".success-message");
+  if (existingMessage) {
+    existingMessage.remove();
+  }
+
+  successMessage.classList.add("success-message");
+  contactForm.appendChild(successMessage);
+});
