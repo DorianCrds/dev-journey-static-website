@@ -1,3 +1,7 @@
+/* -------------------- */
+/* Projects accordion   */
+/* -------------------- */
+
 const projects = document.querySelectorAll(".project");
 
 projects.forEach((project) => {
@@ -6,15 +10,17 @@ projects.forEach((project) => {
   title.addEventListener("click", () => {
     const isActive = project.classList.contains("active");
 
-    projects.forEach((p) => {
-      p.classList.remove("active");
-    });
+    projects.forEach((p) => p.classList.remove("active"));
 
     if (!isActive) {
       project.classList.add("active");
     }
   });
 });
+
+/* -------------------- */
+/* Smooth navigation    */
+/* -------------------- */
 
 const navLinks = document.querySelectorAll(".main-nav a");
 
@@ -31,15 +37,31 @@ navLinks.forEach((link) => {
   });
 });
 
+/* -------------------- */
+/* Burger menu          */
+/* -------------------- */
+
+const burger = document.querySelector(".burger");
+const navLinksContainer = document.querySelector(".nav-links");
+
+burger.addEventListener("click", () => {
+  navLinksContainer.classList.toggle("open");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinksContainer.classList.remove("open");
+  });
+});
+
+/* -------------------- */
+/* Contact form         */
+/* -------------------- */
 
 const contactForm = document.querySelector("#contact form");
 
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  const name = document.querySelector("#name").value;
-  const email = document.querySelector("#email").value;
-  const message = document.querySelector("#message").value;
 
   contactForm.reset();
 
@@ -49,12 +71,10 @@ contactForm.addEventListener("submit", (event) => {
   successMessage.style.marginTop = "1rem";
   successMessage.style.color = "var(--accent)";
   successMessage.style.fontWeight = "500";
-
-  const existingMessage = contactForm.querySelector(".success-message");
-  if (existingMessage) {
-    existingMessage.remove();
-  }
-
   successMessage.classList.add("success-message");
+
+  const existing = contactForm.querySelector(".success-message");
+  if (existing) existing.remove();
+
   contactForm.appendChild(successMessage);
 });
