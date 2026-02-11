@@ -2,6 +2,8 @@
 
 This project is part of my Dev Journey, a structured, project-based exploration of software development concepts through hands-on projects.
 
+[View Dev Journey GitHub 'Hub' repository](https://github.com/DorianCrds/dev-journey-static-website)
+
 This project focuses on web fundamentals, responsive design, and client-side interactivity, providing a first real-world experience with a static website built using HTML, CSS, and JavaScript only.
 
 ---
