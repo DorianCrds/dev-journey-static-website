@@ -18,6 +18,22 @@ and this project follows semantic versioning.
 
 ---
 
+## [v1.1.0] – Add Mento project to roadmap
+
+### Added
+* Added a fourth project to the Dev Journey roadmap section
+* Expanded the project listing content displayed on the website
+
+### Changed
+* Updated the roadmap section to reflect the latest state of the Dev Journey series
+* Improved project showcase consistency across listed projects
+
+### Technical details
+* Updated HTML structure for the roadmap section
+* Preserved responsive behavior and accordion interactions
+
+---
+
 ## [v1.0.0] – Initial static website release
 
 ### Added
