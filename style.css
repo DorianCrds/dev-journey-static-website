@@ -244,6 +244,8 @@ footer p {
   color: var(--secondary);
   border: 1px solid var(--secondary);
   padding: 0.4rem 0.75rem;
+  margin-bottom: 0.75rem;
+
   border-radius: 6px;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
